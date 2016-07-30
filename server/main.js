@@ -1,1 +1,6 @@
-// Server Main.js
+import { Meteor } from 'meteor/meteor';
+// import collections here
+
+Meteor.startup(() => {
+  // add publications here
+});
