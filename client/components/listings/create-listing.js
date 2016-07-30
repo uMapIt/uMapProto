@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Blaze from 'meteor/gadicc:blaze-react-component';
+import { Link, browserHistory } from 'react-router';
 
 class CreateListing extends Component {
   constructor(props) {
@@ -10,14 +11,16 @@ class CreateListing extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { title, category, city, description } = this.refs;
-    Meteor.call('listings.create', title.value, category.value, city.value, description.value);
+    Meteor.call('listings.create', title.value, category.value, city.value, description.value, (err, listingId) => {
+      browserHistory.push(`/listings/${listingId}`)
+    });
   }
 
   render() {
     return (
       <div className="container">
         <h1>Create A New Listing</h1>
-        <Blaze template="map" />
+        {/*<Blaze template="map" />*/}
         <div className="text-danger">
           {this.state.err}
         </div>

@@ -3,5 +3,7 @@ import { Listings } from '../imports/collections/listings';
 import { Markers } from '../imports/collections/markers';
 
 Meteor.startup(() => {
-  // add publications here
+  Meteor.publish('listings', function() {
+    return Listings.find({});
+  });
 });

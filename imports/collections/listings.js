@@ -4,7 +4,7 @@ import { Session } from 'meteor/session';
 
 Meteor.methods({
   'listings.create': function(title, category, city, description) {
-    Listings.insert({
+    return Listings.insert({
       title: title,
       category: category,
       city: city,
