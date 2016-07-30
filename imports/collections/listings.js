@@ -1,20 +1,16 @@
 import { Mongo } from 'meteor/mongo';
 import { check, Match } from 'meteor/check';
+import { Session } from 'meteor/session';
 
 Meteor.methods({
-  'listings.create': function(lat, lng, icon) {
-    return Listings.insert({
-      title: '',
-      category: '',
-      city: '',
-      description: '',
+  'listings.create': function(title, category, city, description) {
+    Listings.insert({
+      title: title,
+      category: category,
+      city: city,
+      description: description,
       createdAt: new Date(),
       updatedAt: new Date(),
-      lat: lat,
-      lng: lng,
-      flagged: false,
-      draggable: true,
-      icon: icon,
       user: this.userId,
       images: [],
       comments: [],

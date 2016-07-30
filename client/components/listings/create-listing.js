@@ -9,7 +9,8 @@ class CreateListing extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.refs.title.value);
+    const { title, category, city, description } = this.refs;
+    Meteor.call('listings.create', title.value, category.value, city.value, description.value);
   }
 
   render() {
