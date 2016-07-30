@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-// import collections here
+import { Listings } from '../imports/collections/listings';
 
 Meteor.startup(() => {
   // add publications here
