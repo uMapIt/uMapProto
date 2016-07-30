@@ -7,10 +7,12 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './components/app';
 import CreateListing from './components/listings/create-listing';
 import ListingDetail from './components/listings/listing-detail';
+import ListView from './components/listings/list-view';
 
 const routes = (
   <Router history={browserHistory}>
     <Route path='/' component={App}>
+      <IndexRoute component={ListView}/>
       <Route path='create' component={CreateListing} />
       <Route path='listings/:listingId' component={ListingDetail} />
     </Route>
