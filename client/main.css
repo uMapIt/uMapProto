@@ -15,3 +15,9 @@
 .fa {
   margin: 5px;
 }
+
+.jumbotron {
+  padding: 20px;
+  background-image: url("/img/busanbg.jpg");
+  background-size: cover;
+}
