@@ -1,4 +1,5 @@
 import { Listings } from '../../imports/collections/listings';
+import { Markers } from '../../imports/collections/markers';
 import { Session } from 'meteor/session';
 
 Session.set('centerLat', 35.157354);
@@ -23,9 +24,8 @@ Template.map.helpers({
   zoom: function() {
     return Session.get('zoom');
   },
-  item: function() {
-    const id = Session.get('listId');
-    return Listings.findOne({ _id: id });
+  items: function() {
+    return Markers.find({ _id: "NsD4so6iC55aJ77tN" });
   }
 });
 
@@ -33,7 +33,8 @@ Template.map.events({
   'map_click .map': function(event) {
     const lat = event.originalEvent.detail.lat;
     const lng = event.originalEvent.detail.lng;
-    console.log(`this is the lat ${lat} and the lng ${lng}`);
-    Meteor.call('listings.create', lat, lng);
+    const icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + Math.floor(Math.random() * 10) + '|FF0000|FFFFFF';
+
+    Meteor.call('markers.create', lat, lng, icon);
   }
 });
