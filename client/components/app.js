@@ -14,6 +14,12 @@ export default (props) => {
         <div className="row">
           {props.children}
         </div>
+        <div className='row footer'>
+          <span className='col-xs-6 cr'>&#169; 2016 uMAPiT Team</span>
+          <span className='col-xs-6 rh'>
+            <a href='url' target='_blank'>Legal</a> | <a href='url' target='_blank'>Privacy</a> | <a href='url' target='_blank'>Contact</a>
+          </span>
+        </div>
       </div>
     </div>
   );
