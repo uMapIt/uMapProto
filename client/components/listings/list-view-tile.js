@@ -7,7 +7,7 @@ class ListViewTile extends Component {
       <div className="feed-item col-md-4">
         <img className="user-icon" src="https://s3.ap-northeast-2.amazonaws.com/umapit/user_pic.png" />
         <a className="user-name" href="">Stephen Mayeux</a>
-        <a className="location-name">{this.props.listing.title}</a>
+        <Link className="location-name" to={`/listings/${this.props.listing._id}`}>{this.props.listing.title}</Link>
         <img className="location-thumbnail img-responsive" src="https://s3.ap-northeast-2.amazonaws.com/umapit/img_user02.jpg" />
         <p className="about-post"><span className ="time-stamp">45 mins ago</span> to <a className="category" href="">{this.props.listing.category}</a> in
             <a className="location-post" href="">{this.props.listing.city}</a>
@@ -21,4 +21,4 @@ class ListViewTile extends Component {
 
 export default ListViewTile;
 
-// <h3><Link to={`/listings/${this.props.listing._id}`}>{this.props.listing.title}</Link></h3>
+// <h3></h3>
