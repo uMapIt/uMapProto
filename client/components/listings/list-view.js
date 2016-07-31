@@ -8,7 +8,9 @@ class ListView extends Component {
   render() {
     return (
       <div className="row">
-        {this.props.listings.map(listing => <ListViewTile key={listing._id} listing={listing} />)}
+        <div className="feed colxs-12">
+          {this.props.listings.map(listing => <ListViewTile key={listing._id} listing={listing} />)}
+        </div>
       </div>
     );
   }
@@ -16,7 +18,7 @@ class ListView extends Component {
 
 export default createContainer(() => {
   Meteor.subscribe('listings');
-  return { listings: Listings.find({}).fetch() };
+  return { listings: Listings.find({}, {sort: {createdAt: -1 }}).fetch() };
 }, ListView);
 
 /*

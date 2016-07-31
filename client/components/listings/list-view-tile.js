@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 class ListViewTile extends Component {
   render() {
     return (
-      <div className="feed-item col-md-4">
+      <div className="feed-item col-md-3">
         <img className="user-icon" src="https://s3.ap-northeast-2.amazonaws.com/umapit/user_pic.png" />
         <a className="user-name" href="">Stephen Mayeux</a>
         <Link className="location-name" to={`/listings/${this.props.listing._id}`}>{this.props.listing.title}</Link>

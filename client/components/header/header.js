@@ -8,7 +8,7 @@ class Header extends Component {
 
   render() {
     return (
-      <nav id="navbar">
+      <nav id="navbar" className="navbar">
         <div className="row">
          <div id="" className="nav-wrapper navbar col-xs-12">
            <img className="navbar-brand pull-*-left col-xs-3" id="logo" src="https://s3.ap-northeast-2.amazonaws.com/umapit/logowhite.png" />
