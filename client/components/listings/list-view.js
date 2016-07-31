@@ -7,11 +7,8 @@ class ListView extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1>List View</h1>
-        <div className="row">
-          {this.props.listings.map(listing => <ListViewTile key={listing._id} listing={listing} />)}
-        </div>
+      <div className="row">
+        {this.props.listings.map(listing => <ListViewTile key={listing._id} listing={listing} />)}
       </div>
     );
   }
@@ -21,3 +18,12 @@ export default createContainer(() => {
   Meteor.subscribe('listings');
   return { listings: Listings.find({}).fetch() };
 }, ListView);
+
+/*
+<div classNameNameName="container">
+  <h1>List View</h1>
+  <div classNameNameName="row">
+    {this.props.listings.map(listing => <ListViewTile key={listing._id} listing={listing} />)}
+  </div>
+</div>
+*/

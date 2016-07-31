@@ -20,7 +20,7 @@ class CreateListing extends Component {
     return (
       <div className="container">
         <h1>Create A New Listing</h1>
-        {/*<Blaze template="map" />*/}
+        <Blaze template="map" />
         <div className="text-danger">
           {this.state.err}
         </div>

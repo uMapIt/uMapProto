@@ -6,4 +6,8 @@ Meteor.startup(() => {
   Meteor.publish('listings', function() {
     return Listings.find({});
   });
+
+  Meteor.publish('markers.all', function() {
+    return Markers.find({});
+  });
 });

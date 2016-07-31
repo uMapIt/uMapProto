@@ -7,8 +7,14 @@ export default (props) => {
   return (
     <div>
       <Header />
-      <CoverImage />
-      {props.children}
+      <div className="container-fluid">
+        <CoverImage />
+      </div>
+      <div className="container">
+        <div className="row">
+          {props.children}
+        </div>
+      </div>
     </div>
   );
 };

@@ -23,5 +23,270 @@
 }
 
 .map {
-  height: 600px;
+  height: 300px;
+}
+
+
+/* cross-browser compatibility code start */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* cross-browser compatibility code end */
+
+
+body {
+  background-color: #f3f9eb !important;
+  font-family: "calibri", sans-serif;
+}
+
+/* Navbar styling Start */
+
+#navbar {
+    position : fixed;
+    width: 100%;
+    background-color: #01ACC8;
+    height: 100px;
+    z-index: 10;
+}
+
+#nav-wrapper{
+    position: relative;
+}
+
+#search{
+    margin-top: 23px;
+    margin-left: 100px;
+    margin-right: 25px;
+}
+
+.search-round{
+	border-radius:5px;
+    width: 400px;
+    height: 40px;
+}
+
+#sign-up{
+    font-weight: bolder;
+
+}
+
+.navbar-brand {
+  margin: -35px 10px ;
+  height: 160px !important;
+}
+
+.header-search {
+  position: relative;
+  float: left;
+}
+
+#search input {
+  padding: 5px;
+  color: #555555;
+  background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png');
+  background-repeat: no-repeat;
+  background-position: 360px;
+  background-size: 25px;
+}
+
+.header-right {
+ margin-left: 85px;
+}
+
+#mapview {
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 30px;
+  float: right;
+}
+
+#mapview:hover {
+    background-color: #01ACC8;
+}
+
+.sign-button {
+  background-color: #03cae9;
+  color: white;
+  float:right;
+  margin: 27px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.sign-button:hover {
+    color: #555555;
+}
+/* Navbar styling End */
+
+/* Banner Styling Start */
+.bannerText {
+  position: absolute;
+  color: white;
+  left: 0;
+  margin-top: 100px;
+  right: 0;
+  text-align: center;
+  z-index: 8;
+}
+
+.bannerText h1 {
+  margin-top: 50px;
+  font-size: 56px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7), -1px -1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.bannerText p {
+  font-size: 24px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), -1px -1px 3px rgba(0, 0, 0, 0.9);
+}
+/* Rotating banner images start */
+.m_fade{
+  height: 350px;
+  left: -25px;
+  margin-top: 100px;
+  right: 0;
+	position: relative;
+  width: 1280px;
+  z-index: 0;
+}
+
+.m_fade ul {
+	list-style: none;
+}
+
+/*User Feed Styling Start*/
+.feed {
+   margin:40px;
+   margin-bottom: 100px;
+}
+
+.feed a:hover {
+    text-decoration: none;
+    font-weight:bold;
+
+}
+
+.feed-item {
+   background-color: white;
+   width : 380px;
+   height:390px;
+   border-radius: 8px;
+   margin:50px;
+   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.user-icon {
+    float: left;
+    margin: 5px;
+    width: 75px;
+    height: auto;
+}
+
+.user-name {
+    color:#009cbf !important;
+    font-size: 14px;
+    margin-top: 15px;
+    float: left;
+
+}
+
+
+.location-name {
+    color: #009cbf !important;
+    font-size: 20px;
+    float: right;
+    margin-top: 60px;
+
+}
+
+.location-thumbnail {
+    width : 345px;
+    height:225px;
+    padding-top: 10px;
+}
+
+.about-post {
+     color : #797777;
+     font-size: 12px;
+     margin-top: 20px;
+     margin-right:30px;
+     float: left;
+}
+
+.category {
+    color:#a11bb9 !important;
+    font-size: 12px;
+
+}
+
+.location-post {
+    color:#a11bb9 !important;
+    font-size: 12px;
+}
+
+.flag-icon {
+    margin-top: 10px;
+    float: right;
+}
+
+.comment-icon {
+    margin-top: 10px;
+    float: right;
+}
+/*User Feed Styling End*/
+
+/* Footer Styling Start */
+.footer {
+  background-color: #01acc8;
+  bottom: 0;
+  color: white;
+  height: 65px;
+  left: 0;
+  margin: 0;
+  padding: 1%;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+}
+
+.footer a:link, a:active, a:visited {
+  color: #ade73a;
+  text-decoration: none;
+}
+
+.footer a:hover, a:focus {
+  text-decoration: underline;
+}
+
+.footer .cr {
+  font-weight: bold;
+}
+
+.footer .rh {
+  text-align: right;
+}
+
+.widewrapper {
+  width: 100%;
+}
+
+.widewrapper > img {
+  width: 100%;
 }
