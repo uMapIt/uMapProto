@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-class ListViewTile extends Component {
+class ListingsViewTile extends Component {
   render() {
     return (
       <div className="feed-item col-md-3">
@@ -19,6 +19,4 @@ class ListViewTile extends Component {
   }
 }
 
-export default ListViewTile;
-
-// <h3></h3>
+export default ListingsViewTile;

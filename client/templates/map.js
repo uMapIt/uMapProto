@@ -52,9 +52,6 @@ if (Meteor.isClient) {
       let lng = event.originalEvent.detail.lng;
       let icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + Math.floor(Math.random() * 10) + '|FF0000|FFFFFF';
 
-      Session.set('lat', lat);
-      Session.set('lng', lng);
-
       Meteor.call('markers.create', lat, lng, icon, (err, markerId) => {
         Session.set('markerId', markerId);
       });

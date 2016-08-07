@@ -1,25 +1,7 @@
 /* CSS declarations go here */
-#login-buttons {
-  margin: 18px;
-  font-size: 14px;
-}
-
-#add-new-listing {
-  margin: 10px;
-}
-
-#search-bar {
-  margin: 10px;
-}
-
-.fa {
-  margin: 5px;
-}
-
 .map {
   height: 300px;
 }
-
 
 
 /* cross-browser compatibility code start */
@@ -127,15 +109,21 @@ ul {
 
 .sign-button {
   background-color: #03cae9;
-  color: white;
-  float:right;
+  color: #797777;
+  float: right;
   margin: 27px 10px;
   border-radius: 5px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
-.sign-button:hover {
-    color: #555555;
+
+.in {
+  color: white;
 }
+
+.up {
+  background-color: #ade73a;
+}
+
 /* Navbar styling End */
 
 /* Banner Styling Start */
@@ -296,12 +284,3 @@ ul {
   text-align: right;
 }
 /*footer styling end */
-
-
-.widewrapper {
-  width: 100%;
-}
-
-.widewrapper > img {
-  width: 100%;
-}
