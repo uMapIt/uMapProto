@@ -11,7 +11,8 @@ class CreateListing extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const { title, category, city, description } = this.refs;
-    Meteor.call('listings.create', title.value, category.value, city.value, description.value, (err, listingId) => {
+    const marker = Session.get('markerId');
+    Meteor.call('listings.create', title.value, category.value, city.value, description.value, marker, (err, listingId) => {
       browserHistory.push(`/listings/${listingId}`)
     });
   }
