@@ -10,7 +10,7 @@ class Header extends Component {
       <nav id="navbar" className="navbar">
           <div className="row">
            <div id="" className="nav-wrapper navbar">
-             <img className="navbar-brand pull-*-left col-xs-3" id="logo" src="https://s3.ap-northeast-2.amazonaws.com/umapit/logowhite.png" />
+             <Link to='/' ><img className="navbar-brand pull-*-left col-xs-3" id="logo" src="https://s3.ap-northeast-2.amazonaws.com/umapit/logowhite.png" /></Link>
               <div className= "header-search col-xs-4">
                   <form id = "search">
                       <span><input  type="text" className="search-round" placeholder="Search Maps..." required /></span>
