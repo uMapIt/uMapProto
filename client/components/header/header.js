@@ -19,7 +19,7 @@ class Header extends Component {
               <div className="header-right col-xs-4">
                   <ul className="nav navbar-nav">
                       <li><a id ="mapview" href=""><img id="mapicon" src="https://s3.ap-northeast-2.amazonaws.com/umapit/icon_map.png" /></a></li>
-                      <li><button classNameName="btn sign-button in" href="">Sign In</button></li>
+                      <li><button className="btn sign-button in" href="">Sign In</button></li>
                       <li><button className="btn sign-button up" href=""><span id="sign-up">Sign Up</span></button></li>
                   </ul>
               </div>

@@ -32,6 +32,7 @@ time, mark, audio, video {
 body {
   background-color: #f3f9eb !important;
   font-family: "calibri", sans-serif;
+  margin-bottom: 50px;
 }
 
 /* Navbar styling Start */

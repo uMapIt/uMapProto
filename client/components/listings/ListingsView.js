@@ -8,7 +8,7 @@ class ListingsView extends Component {
   render() {
     return (
       <div className="row">
-        <div className="feed">
+        <div className="feed">          
           {this.props.listings.map(listing => <ListingsViewTile key={listing._id} listing={listing} />)}
         </div>
       </div>

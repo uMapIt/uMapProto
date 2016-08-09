@@ -10,4 +10,5 @@ Meteor.startup(() => {
   Meteor.publish('markers.all', function() {
     return Markers.find({});
   });
+
 });
