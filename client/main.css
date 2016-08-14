@@ -1,5 +1,6 @@
 /* CSS declarations go here */
 .map {
+  width: 300px;
   height: 300px;
 }
 

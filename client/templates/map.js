@@ -1,11 +1,20 @@
 import { Markers } from '../../imports/collections/markers';
 import { ReactiveVar } from 'meteor/reactive-var';
+import { Link, browserHistory } from 'react-router';
 
 if (Meteor.isClient) {
   Session.setDefault('centerLat', 35.157354);
   Session.setDefault('centerLng', 129.059168);
   Session.setDefault('zoom', 13);
   Session.setDefault('makerId', '');
+
+  GoogleMaps.setConfig('helpers.getInfoWindowContent', function(item) {
+    return item.name || 'item-' + item._id;
+  });
+
+  GoogleMaps.setConfig('helpers.isInfoWindowOpen', function(item) {
+    return Session.get('infoWindowShow-' + item._id);
+  });
 
   Template.map.helpers({
     centerLat: function() {
@@ -17,7 +26,7 @@ if (Meteor.isClient) {
     },
 
     zoom: function() {
-      return Session.get('zoom');
+      return 10;
     },
 
     items: function() {
@@ -47,6 +56,11 @@ if (Meteor.isClient) {
       Meteor.call('markers.create', lat, lng, icon, (err, markerId) => {
         Session.set('markerId', markerId);
       });
+    },
+
+    'marker_click .map': function(event) {
+      var itemId = event.originalEvent.detail.id;
+      browserHistory.push(`/listings/${itemId}`);
     }
 
   });
