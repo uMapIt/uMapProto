@@ -29,7 +29,6 @@ if (Meteor.isClient) {
     },
 
     items: function() {
-      console.log(Template.instance().markers());
       return Template.instance().markers();
     }
   });

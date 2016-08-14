@@ -7,14 +7,6 @@ if (Meteor.isClient) {
   Session.setDefault('zoom', 13);
   Session.setDefault('makerId', '');
 
-  GoogleMaps.setConfig('helpers.getInfoWindowContent', function(item) {
-  return item.name || 'item-' + item._id;
-  });
-
-  GoogleMaps.setConfig('helpers.isInfoWindowOpen', function(item) {
-    return Session.get('infoWindowShow-' + item._id);
-  });
-
   Template.map.helpers({
     centerLat: function() {
       return Session.get('centerLat');
