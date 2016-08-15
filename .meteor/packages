@@ -24,5 +24,7 @@ accounts-password
 gadicc:blaze-react-component
 meteortoys:allthings
 fortawesome:fontawesome
-daishi:blaze-google-maps
 session
+autopublish
+insecure
+dburles:google-maps
