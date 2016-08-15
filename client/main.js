@@ -8,6 +8,7 @@ import App from './components/app';
 import ListingsCreate from './components/listings/ListingsCreate';
 import ListingsDetail from './components/listings/ListingsDetail';
 import ListingsView from './components/listings/ListingsView';
+import ListingsMap from './components/listings/ListingsMap';
 
 const routes = (
   <Router history={browserHistory}>
@@ -15,6 +16,7 @@ const routes = (
       <IndexRoute component={ListingsView}/>
       <Route path='create' component={ListingsCreate} />
       <Route path='listings/:listingId' component={ListingsDetail} />
+      <Route path='map' component={ListingsMap} />
     </Route>
   </Router>
 );

@@ -19,17 +19,17 @@ class Header extends Component {
                 <Link to="/" className="navbar-brand">uMapiT</Link>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul className="nav navbar-nav">
-                    <li>
-                        <Accounts />
-                    </li>
-                    <li>
-                        <Link to="/create">Add A Restaurant</Link>
-                    </li>
-                    <li>
-                        <a href="#">Map View</a>
-                    </li>
-                </ul>
+              <ul className="nav navbar-nav">
+                  <li>
+                      <Accounts />
+                  </li>
+                  <li>
+                      <Link to="/create">Add A Restaurant</Link>
+                  </li>
+                  <li>
+                      <Link to="/map">Map View</Link>
+                  </li>
+              </ul>
             </div>
         </div>
       </nav>
