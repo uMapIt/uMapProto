@@ -13,7 +13,6 @@ class ListingsDetail extends Component {
     return (
       <div className="row">
         <div className="col-md-8">
-          <Blaze template="mapDetail" />
           <h1>{title}</h1>
           <h3>{`Posted in ${category} for ${city}`}</h3>
           <p>{description}</p>

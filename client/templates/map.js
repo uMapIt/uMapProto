@@ -1,4 +1,5 @@
 import { Markers } from '../../imports/collections/markers';
+import { Listings } from '../../imports/collections/listings'
 import { ReactiveVar } from 'meteor/reactive-var';
 import { Link, browserHistory } from 'react-router';
 
@@ -56,13 +57,8 @@ if (Meteor.isClient) {
       Meteor.call('markers.create', lat, lng, icon, (err, markerId) => {
         Session.set('markerId', markerId);
       });
-    },
-
-    'marker_click .map': function(event) {
-      var itemId = event.originalEvent.detail.id;
-      browserHistory.push(`/listings/${itemId}`);
     }
-
+    
   });
 
 
