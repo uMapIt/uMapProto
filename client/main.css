@@ -1,9 +1,16 @@
-/* CSS declarations go here */
+/* ===== CREATE LISTING VIEW ======= */
+
 .map-container {
-  width: 100%;
+  width: 500px;
   max-width: 100%;
   height: 500px;
 }
+
+.create-button {
+  margin-top: 10px;
+}
+
+/* ================================ */
 
 #login-buttons {
   padding: 18px 10px 0 10px;

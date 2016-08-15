@@ -20,24 +20,35 @@ class CreateListing extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Create A New Listing</h1>
-        <Blaze template="map" />
-        <div className="text-danger">
-          {this.state.err}
-        </div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <div className="form-group">
-            <label>Listing Title</label>
-            <input ref="title" className="form-control" />
-            <label>Category</label>
-            <input ref="category" className="form-control" />
-            <label>City</label>
-            <input ref="city" className="form-control" />
-            <label>Description</label>
-            <input type="textarea" ref="description" className="form-control" />
-            <button className="btn btn-primary">Map Yourself!</button>
+        <div className="row">
+          <div className="col-md-12">
+            <h1>Add a Restaurant or Bar</h1>
+            <p className="lead">Locate the place on the map. Drop a pin. Fill in the details.</p>
           </div>
-        </form>
+        </div>
+        <div className="row">
+          <div className="col-md-6">
+            <Blaze template="map" />
+            <div className="text-danger">
+              {this.state.err}
+            </div>
+          </div>
+          <div className="col-md-6">
+            <form onSubmit={this.handleSubmit.bind(this)}>
+              <div className="form-group">
+                <label>Listing Title</label>
+                <input ref="title" className="form-control" />
+                <label>Category</label>
+                <input ref="category" className="form-control" />
+                <label>City</label>
+                <input ref="city" className="form-control" />
+                <label>Description</label>
+                <input type="textarea" ref="description" className="form-control" />
+                <button className="btn btn-primary create-button">Map Yourself!</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }
