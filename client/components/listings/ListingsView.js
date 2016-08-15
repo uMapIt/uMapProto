@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Listings } from '../../../imports/collections/listings';
 import ListingsViewTile from './ListingsViewTile';
+import CoverImage from '../cover/cover-image';
 
 class ListingsView extends Component {
 
   render() {
     return (
       <div>
+        <CoverImage />
         <div className="row">
           <div className="col-lg-12">
               <h3>Latest Submissions</h3>

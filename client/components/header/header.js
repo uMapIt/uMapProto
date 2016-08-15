@@ -16,7 +16,7 @@ class Header extends Component {
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                 </button>
-                <Link to="/"><a className="navbar-brand">Start Bootstrap</a></Link>
+                <Link to="/" className="navbar-brand">uMapiT</Link>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
@@ -24,7 +24,7 @@ class Header extends Component {
                         <Accounts />
                     </li>
                     <li>
-                        <a href="#">Create</a>
+                        <Link to="/create">Add A Restaurant</Link>
                     </li>
                     <li>
                         <a href="#">Map View</a>

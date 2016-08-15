@@ -1,3 +1,5 @@
+// CURRENTLY NOT USED
+
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
