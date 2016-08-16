@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 
-import Accounts from '../accounts';
+import Accounts from '../accounts/accounts';
 
 class Header extends Component {
 
