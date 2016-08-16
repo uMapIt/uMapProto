@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
+import { createContainer } from 'meteor/react-meteor-data';
 
 import Accounts from '../accounts/accounts';
 
@@ -19,17 +20,24 @@ class Header extends Component {
                 <Link to="/" className="navbar-brand">uMapiT</Link>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav">
-                  <li>
-                      <Accounts />
-                  </li>
-                  <li>
-                      <Link to="/create">Add A Restaurant</Link>
-                  </li>
-                  <li>
-                      <Link to="/map">Map View</Link>
-                  </li>
-              </ul>
+              { this.props.currentUser ?
+                <ul className="nav navbar-nav">
+                    <li>
+                        <Accounts />
+                    </li>
+                    <li>
+                        <Link to="/create">Add A Restaurant</Link>
+                    </li>
+                    <li>
+                        <Link to="/map">Map View</Link>
+                    </li>
+                </ul> :
+                <ul className="nav navbar-nav">
+                    <li>
+                        <Accounts />
+                    </li>
+                </ul>
+              }
             </div>
         </div>
       </nav>
@@ -37,4 +45,8 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default createContainer(() => {
+  return {
+    currentUser: Meteor.user()
+  };
+}, Header);

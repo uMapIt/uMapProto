@@ -25,5 +25,6 @@ class ListingsView extends Component {
 
 export default createContainer(() => {
   Meteor.subscribe('listings');
-  return { listings: Listings.find({}, {sort: { createdAt: -1 }}).fetch() };
+  return {
+    listings: Listings.find({}, {sort: { createdAt: -1 }}).fetch() };
 }, ListingsView);
