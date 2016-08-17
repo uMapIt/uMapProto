@@ -1,11 +1,6 @@
 import { Markers } from '../../imports/collections/markers';
 
-Meteor.startup(function() {
-  GoogleMaps.load({
-    key: 'AIzaSyAzR7xL05N-ecp76GFheDmXqNnqMiDdmnI'
-  });
-});
-
+// TODO: use user's location to center map
 Template.map.helpers({
   mapOptions: function() {
     if (GoogleMaps.loaded()) {

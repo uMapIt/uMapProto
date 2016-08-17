@@ -32,5 +32,10 @@ const routes = (
 );
 
 Meteor.startup(() => {
+  
+  GoogleMaps.load({
+    key: 'AIzaSyAzR7xL05N-ecp76GFheDmXqNnqMiDdmnI'
+  });
+
   ReactDOM.render(routes, document.querySelector('.render-target'));
 })
