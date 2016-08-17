@@ -13,9 +13,18 @@ Template.map.helpers({
 });
 
 Template.map.onCreated(function() {
+
+  let update_timeout = null;
+
   GoogleMaps.ready('map', function(map) {
     google.maps.event.addListener(map.instance, 'click', function(event) {
-      Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+      update_timeout = setTimeout(function() {
+        Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+      }, 200);
+    });
+
+    google.maps.event.addListener(map.instance, 'dblclick', function(event) {
+      clearTimeout(update_timeout);
     });
 
     var markers = {};
