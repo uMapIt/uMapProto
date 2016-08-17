@@ -10,6 +10,7 @@ import ListingsDetail from './components/listings/ListingsDetail';
 import ListingsView from './components/listings/ListingsView';
 import ListingsMap from './components/listings/ListingsMap';
 
+
 const requireAuth = (nextState, replace) => {
   if (!Meteor.user()) {
     replace({
