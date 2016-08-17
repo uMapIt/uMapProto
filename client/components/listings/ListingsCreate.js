@@ -28,7 +28,9 @@ class CreateListing extends Component {
         </div>
         <div className="row">
           <div className="col-md-6">
-            <Blaze template="map" />
+            <div className="map-container">
+              <Blaze template="map" />
+            </div>
             <div className="text-danger">
               {this.state.err}
             </div>

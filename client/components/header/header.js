@@ -28,9 +28,6 @@ class Header extends Component {
                     <li>
                         <Link to="/create">Add A Restaurant</Link>
                     </li>
-                    <li>
-                        <Link to="/map">Map View</Link>
-                    </li>
                 </ul> :
                 <ul className="nav navbar-nav">
                     <li>
