@@ -17,12 +17,14 @@ Template.map.onCreated(function() {
   let update_timeout = null;
 
   GoogleMaps.ready('map', function(map) {
-    google.maps.event.addListener(map.instance, 'click', function(event) {
+
+    google.maps.event.addListenerOnce(map.instance, 'click', function(event) {
       update_timeout = setTimeout(function() {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() });
       }, 200);
     });
 
+    // Prevents 'click' event from firing off first
     google.maps.event.addListener(map.instance, 'dblclick', function(event) {
       clearTimeout(update_timeout);
     });
