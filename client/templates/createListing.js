@@ -24,6 +24,7 @@ Template.createListing.onCreated(function() {
         if (!markerAdded) {
           Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng() }, function(err, markerId) {
 
+            Session.set('markerId', markerId);
             var markers = {};
 
             Markers.find({ _id: markerId }).observe({
