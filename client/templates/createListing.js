@@ -1,7 +1,7 @@
 import { Markers } from '../../imports/collections/markers';
 
 // TODO: use user's location to center map
-Template.map.helpers({
+Template.createListing.helpers({
   mapOptions: function() {
     if (GoogleMaps.loaded()) {
       return {
@@ -12,12 +12,12 @@ Template.map.helpers({
   }
 });
 
-Template.map.onCreated(function() {
+Template.createListing.onCreated(function() {
 
   var updateTimeout = null;
   var markerAdded = false;
 
-  GoogleMaps.ready('map', function(map) {
+  GoogleMaps.ready('createListing', function(map) {
 
     google.maps.event.addListener(map.instance, 'click', function(event) {
       updateTimeout = setTimeout(function() {
