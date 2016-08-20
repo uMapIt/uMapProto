@@ -3,7 +3,7 @@ import { check, Match } from 'meteor/check';
 import { Session } from 'meteor/session';
 
 Meteor.methods({
-  'listings.create': function(title, category, city, description, marker) {
+  'listings.create': function(title, category, city, description, marker, userFullName, userProfilePicture) {
     return Listings.insert({
       title: title,
       category: category,
@@ -12,6 +12,8 @@ Meteor.methods({
       createdAt: new Date(),
       updatedAt: new Date(),
       user: this.userId,
+      userFullName: userFullName,
+      userProfilePicture: userProfilePicture,
       marker: marker,
       images: [],
       comments: [],
