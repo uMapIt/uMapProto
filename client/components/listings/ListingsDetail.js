@@ -15,6 +15,9 @@ class ListingsDetail extends Component {
         <div className="col-md-8">
           <h1>{title}</h1>
           <h3>{`Posted in ${category} for ${city}`}</h3>
+          <div className="full-map-container">
+            <Blaze template="showListing" />
+          </div>
           <p>{description}</p>
         </div>
       </div>

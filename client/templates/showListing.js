@@ -10,3 +10,27 @@ Template.showListing.helpers({
     }
   }
 });
+
+Template.showListing.onCreated(function() {
+
+  GoogleMaps.ready('showListing', function(map) {
+
+    var markers = {};
+    var markerId = Session.get('marker');
+
+    Markers.find({ _id: markerId }).observe({
+
+      added: function(document) {
+        var marker = new google.maps.Marker({
+          draggable: false,
+          animation: google.maps.Animation.DROP,
+          position: new google.maps.LatLng(document.lat, document.lng),
+          map: map.instance,
+          id: document._id
+        });
+
+        markers[document._id] = marker;
+      }
+    });
+  });
+});
