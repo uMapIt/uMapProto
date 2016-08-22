@@ -1,5 +1,6 @@
 import { Markers } from '../../imports/collections/markers';
 
+// TODO: adjust zoom and center coordinates based on marker
 Template.showListing.helpers({
   mapOptions: function() {
     if (GoogleMaps.loaded()) {
